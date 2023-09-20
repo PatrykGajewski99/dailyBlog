@@ -1,0 +1,157 @@
+name: User
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: api/user/register
+    metadata:
+      groupName: User
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Register User'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      first_name:
+        name: first_name
+        description: 'User first name. Must not be greater than 64 characters. Must be at least 2 characters.'
+        required: true
+        example: Patryk
+        type: string
+        enumValues: []
+        custom: []
+      last_name:
+        name: last_name
+        description: 'User last name. Must not be greater than 64 characters. Must be at least 2 characters.'
+        required: true
+        example: Gajewski
+        type: string
+        enumValues: []
+        custom: []
+      phone_number:
+        name: phone_number
+        description: 'User phone number. Must be at least 9 characters. Must not be greater than 12 characters.'
+        required: true
+        example: '777878787'
+        type: string
+        enumValues: []
+        custom: []
+      email:
+        name: email
+        description: 'User email. Must be a valid email address.'
+        required: true
+        example: example@gmail.com
+        type: string
+        enumValues: []
+        custom: []
+      country:
+        name: country
+        description: 'User country of origin. Possible to add (poland,germany,spain,portugal).'
+        required: true
+        example: Poland
+        type: string
+        enumValues:
+          - poland
+          - germany
+          - spain
+          - portugal
+        custom: []
+      town:
+        name: town
+        description: 'Town name where user live.'
+        required: false
+        example: Warsaw
+        type: string
+        enumValues: []
+        custom: []
+      password:
+        name: password
+        description: 'Password should have min one capital, number and special character.'
+        required: false
+        example: 'Qwerty123#'
+        type: string
+        enumValues: []
+        custom: []
+      password_confirmation:
+        name: password_confirmation
+        description: 'Confirmation password which has to be the same like password above. The value and <code>password</code> must match.'
+        required: true
+        example: 'Qwerty123#'
+        type: string
+        enumValues: []
+        custom: []
+    cleanBodyParameters:
+      first_name: Patryk
+      last_name: Gajewski
+      phone_number: '777878787'
+      email: example@gmail.com
+      country: Poland
+      town: Warsaw
+      password: 'Qwerty123#'
+      password_confirmation: 'Qwerty123#'
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/user/login
+    metadata:
+      groupName: User
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Login User'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'User email. Must be a valid email address.'
+        required: false
+        example: example@gmail.com
+        type: string
+        enumValues: []
+        custom: []
+      password:
+        name: password
+        description: ''
+        required: false
+        example: 'S~5\@,FnpOr5L}9'
+        type: string
+        enumValues: []
+        custom: []
+    cleanBodyParameters:
+      email: example@gmail.com
+      password: 'S~5\@,FnpOr5L}9'
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

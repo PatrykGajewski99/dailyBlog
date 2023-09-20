@@ -1,0 +1,99 @@
+openapi: 3.0.3
+info:
+  title: DailyBlog
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost'
+paths:
+  /api/user/register:
+    post:
+      summary: 'Register User'
+      operationId: registerUser
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - User
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                first_name:
+                  type: string
+                  description: 'User first name. Must not be greater than 64 characters. Must be at least 2 characters.'
+                  example: Patryk
+                last_name:
+                  type: string
+                  description: 'User last name. Must not be greater than 64 characters. Must be at least 2 characters.'
+                  example: Gajewski
+                phone_number:
+                  type: string
+                  description: 'User phone number. Must be at least 9 characters. Must not be greater than 12 characters.'
+                  example: '777878787'
+                email:
+                  type: string
+                  description: 'User email. Must be a valid email address.'
+                  example: example@gmail.com
+                country:
+                  type: string
+                  description: 'User country of origin. Possible to add (poland,germany,spain,portugal).'
+                  example: Poland
+                  enum:
+                    - poland
+                    - germany
+                    - spain
+                    - portugal
+                town:
+                  type: string
+                  description: 'Town name where user live.'
+                  example: Warsaw
+                password:
+                  type: string
+                  description: 'Password should have min one capital, number and special character.'
+                  example: 'Qwerty123#'
+                password_confirmation:
+                  type: string
+                  description: 'Confirmation password which has to be the same like password above. The value and <code>password</code> must match.'
+                  example: 'Qwerty123#'
+              required:
+                - first_name
+                - last_name
+                - phone_number
+                - email
+                - country
+                - password_confirmation
+      security: []
+  /api/user/login:
+    post:
+      summary: 'Login User'
+      operationId: loginUser
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - User
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'User email. Must be a valid email address.'
+                  example: example@gmail.com
+                password:
+                  type: string
+                  description: ''
+                  example: 'S~5\@,FnpOr5L}9'
+      security: []
+tags:
+  -
+    name: User
+    description: ''

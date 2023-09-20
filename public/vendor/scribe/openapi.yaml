@@ -1,0 +1,23 @@
+openapi: 3.0.3
+info:
+  title: DailyBlog
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost'
+paths:
+  /api/user/register:
+    post:
+      summary: 'Register User'
+      operationId: registerUser
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - User
+      security: []
+tags:
+  -
+    name: User
+    description: ''
