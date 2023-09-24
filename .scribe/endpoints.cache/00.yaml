@@ -133,7 +133,7 @@ endpoints:
       email:
         name: email
         description: 'User email. Must be a valid email address.'
-        required: false
+        required: true
         example: example@gmail.com
         type: string
         enumValues: []
@@ -141,14 +141,14 @@ endpoints:
       password:
         name: password
         description: ''
-        required: false
-        example: 'S~5\@,FnpOr5L}9'
+        required: true
+        example: q%9Avuw8
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
       email: example@gmail.com
-      password: 'S~5\@,FnpOr5L}9'
+      password: q%9Avuw8
     fileParameters: []
     responses: []
     responseFields: []

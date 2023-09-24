@@ -10,11 +10,48 @@
     ],
     "info": {
         "name": "DailyBlog",
-        "_postman_id": "0202d575-6258-4fab-8476-267f30bd5a67",
+        "_postman_id": "b552d5af-6e89-465e-a626-631b74a8e491",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
     "item": [
+        {
+            "name": "Post",
+            "description": "",
+            "item": [
+                {
+                    "name": "Add blog post",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/post\/add",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/post\/add"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"user_id\":\"bd20787d-c6c2-3b9c-91d8-708c79487597\",\"category\":\"food\",\"title\":\"Eating a lof of sweets are unhealthy\",\"description\":\"In 1999 Michael J wrote that eating a lot of sweets involved on our health\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
         {
             "name": "User",
             "description": "",
@@ -72,7 +109,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"example@gmail.com\",\"password\":\"S~5\\\\@,FnpOr5L}9\"}"
+                            "raw": "{\"email\":\"example@gmail.com\",\"password\":\"q%9Avuw8\"}"
                         },
                         "description": "",
                         "auth": {

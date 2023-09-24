@@ -7,6 +7,49 @@ servers:
   -
     url: 'http://localhost'
 paths:
+  /api/post/add:
+    post:
+      summary: 'Add blog post'
+      operationId: addBlogPost
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Post
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user_id:
+                  type: string
+                  description: 'Must be a valid UUID.'
+                  example: bd20787d-c6c2-3b9c-91d8-708c79487597
+                category:
+                  type: string
+                  description: 'Category of blog post. Possible to use beauty, food, life, sport.'
+                  example: food
+                  enum:
+                    - beauty
+                    - sport
+                    - food
+                    - life
+                title:
+                  type: string
+                  description: 'Title of blog post. Must not be greater than 256 characters.'
+                  example: 'Eating a lof of sweets are unhealthy'
+                description:
+                  type: string
+                  description: 'Blog post description. Must not be greater than 256 characters.'
+                  example: 'In 1999 Michael J wrote that eating a lot of sweets involved on our health'
+              required:
+                - user_id
+                - category
+                - title
+                - description
+      security: []
   /api/user/register:
     post:
       summary: 'Register User'
@@ -78,7 +121,7 @@ paths:
       tags:
         - User
       requestBody:
-        required: false
+        required: true
         content:
           application/json:
             schema:
@@ -91,9 +134,15 @@ paths:
                 password:
                   type: string
                   description: ''
-                  example: 'S~5\@,FnpOr5L}9'
+                  example: q%9Avuw8
+              required:
+                - email
+                - password
       security: []
 tags:
+  -
+    name: Post
+    description: ''
   -
     name: User
     description: ''
