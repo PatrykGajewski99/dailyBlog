@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "DailyBlog",
-        "_postman_id": "b552d5af-6e89-465e-a626-631b74a8e491",
+        "_postman_id": "eeba2de3-6d9b-4440-aeda-9a7d0df16277",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"user_id\":\"bd20787d-c6c2-3b9c-91d8-708c79487597\",\"category\":\"food\",\"title\":\"Eating a lof of sweets are unhealthy\",\"description\":\"In 1999 Michael J wrote that eating a lot of sweets involved on our health\"}"
+                            "raw": "{\"user_id\":\"9a2e1b3e-8d29-41bc-b341-bf8804a5ce62\",\"category\":\"food\",\"title\":\"Eating a lof of sweets are unhealthy\",\"description\":\"In 1999 Michael J wrote that eating a lot of sweets involved on our health\"}"
                         },
                         "description": "",
                         "auth": {
@@ -49,6 +49,62 @@
                         }
                     },
                     "response": []
+                },
+                {
+                    "name": "Get post",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/post\/:post_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/post\/:post_id",
+                            "variable": [
+                                {
+                                    "id": "post_id",
+                                    "key": "post_id",
+                                    "value": "9a306bc8-4cf5-4921-b6f8-c3045745f7a0",
+                                    "description": "The ID of the post."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
                 }
             ]
         },
@@ -109,7 +165,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"example@gmail.com\",\"password\":\"q%9Avuw8\"}"
+                            "raw": "{\"email\":\"example@gmail.com\",\"password\":\"'hJy{G{ye8,u%3K9\\\\cN\"}"
                         },
                         "description": "",
                         "auth": {
@@ -117,6 +173,54 @@
                         }
                     },
                     "response": []
+                },
+                {
+                    "name": "List user posts",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/post",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/post"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
                 }
             ]
         }

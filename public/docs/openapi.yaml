@@ -25,8 +25,8 @@ paths:
               properties:
                 user_id:
                   type: string
-                  description: 'Must be a valid UUID.'
-                  example: bd20787d-c6c2-3b9c-91d8-708c79487597
+                  description: 'User id. Must be a valid UUID.'
+                  example: 9a2e1b3e-8d29-41bc-b341-bf8804a5ce62
                 category:
                   type: string
                   description: 'Category of blog post. Possible to use beauty, food, life, sport.'
@@ -50,6 +50,37 @@ paths:
                 - title
                 - description
       security: []
+  '/api/post/{post_id}':
+    get:
+      summary: 'Get post'
+      operationId: getPost
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Post
+      security: []
+    parameters:
+      -
+        in: path
+        name: post_id
+        description: 'The ID of the post.'
+        example: 9a306bc8-4cf5-4921-b6f8-c3045745f7a0
+        required: true
+        schema:
+          type: string
   /api/user/register:
     post:
       summary: 'Register User'
@@ -134,10 +165,32 @@ paths:
                 password:
                   type: string
                   description: ''
-                  example: q%9Avuw8
+                  example: '''hJy{G{ye8,u%3K9\cN'
               required:
                 - email
                 - password
+      security: []
+  /api/post:
+    get:
+      summary: 'List user posts'
+      operationId: listUserPosts
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - User
       security: []
 tags:
   -

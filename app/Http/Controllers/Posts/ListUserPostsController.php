@@ -15,7 +15,7 @@ class ListUserPostsController
     /**
      * List user posts
      *
-     * @group User
+     * @group Post
      *
      * @return JsonResponse
      */

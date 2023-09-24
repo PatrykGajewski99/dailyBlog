@@ -26,9 +26,9 @@ endpoints:
     bodyParameters:
       user_id:
         name: user_id
-        description: 'Must be a valid UUID.'
+        description: 'User id. Must be a valid UUID.'
         required: true
-        example: bd20787d-c6c2-3b9c-91d8-708c79487597
+        example: 9a2e1b3e-8d29-41bc-b341-bf8804a5ce62
         type: string
         enumValues: []
         custom: []
@@ -61,12 +61,60 @@ endpoints:
         enumValues: []
         custom: []
     cleanBodyParameters:
-      user_id: bd20787d-c6c2-3b9c-91d8-708c79487597
+      user_id: 9a2e1b3e-8d29-41bc-b341-bf8804a5ce62
       category: food
       title: 'Eating a lof of sweets are unhealthy'
       description: 'In 1999 Michael J wrote that eating a lot of sweets involved on our health'
     fileParameters: []
     responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/post/{post_id}'
+    metadata:
+      groupName: Post
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get post'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      post_id:
+        name: post_id
+        description: 'The ID of the post.'
+        required: true
+        example: 9a306bc8-4cf5-4921-b6f8-c3045745f7a0
+        type: string
+        enumValues: []
+        custom: []
+    cleanUrlParameters:
+      post_id: 9a306bc8-4cf5-4921-b6f8-c3045745f7a0
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
     responseFields: []
     auth: []
     controller: null

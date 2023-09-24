@@ -22,6 +22,9 @@ Route::prefix('/user')->group(function () {
 Route::middleware('auth:sanctum')->group( function () {
     Route::prefix('/post')->group(function () {
        Route::post('/add', Posts\AddPostController::class);
+       Route::prefix('/{post}')->group(function () {
+          Route::get('/', Posts\GetPostController::class);
+       });
        Route::get('/', Posts\ListUserPostsController::class);
     });
 });
