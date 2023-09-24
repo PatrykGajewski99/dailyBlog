@@ -1,0 +1,269 @@
+name: Post
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: api/post/add
+    metadata:
+      groupName: Post
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Add blog post'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      user_id:
+        name: user_id
+        description: 'User id. Must be a valid UUID.'
+        required: true
+        example: 9a2e1b3e-8d29-41bc-b341-bf8804a5ce62
+        type: string
+        enumValues: []
+        custom: []
+      category:
+        name: category
+        description: 'Category of blog post. Possible to use beauty, food, life, sport.'
+        required: true
+        example: food
+        type: string
+        enumValues:
+          - beauty
+          - sport
+          - food
+          - life
+        custom: []
+      title:
+        name: title
+        description: 'Title of blog post. Must not be greater than 256 characters.'
+        required: true
+        example: 'Eating a lof of sweets are unhealthy'
+        type: string
+        enumValues: []
+        custom: []
+      description:
+        name: description
+        description: 'Blog post description. Must not be greater than 256 characters.'
+        required: true
+        example: 'In 1999 Michael J wrote that eating a lot of sweets involved on our health'
+        type: string
+        enumValues: []
+        custom: []
+    cleanBodyParameters:
+      user_id: 9a2e1b3e-8d29-41bc-b341-bf8804a5ce62
+      category: food
+      title: 'Eating a lof of sweets are unhealthy'
+      description: 'In 1999 Michael J wrote that eating a lot of sweets involved on our health'
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/post/{post_id}'
+    metadata:
+      groupName: Post
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get post'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      post_id:
+        name: post_id
+        description: 'The ID of the post.'
+        required: true
+        example: 9a306bc8-4cf5-4921-b6f8-c3045745f7a0
+        type: string
+        enumValues: []
+        custom: []
+    cleanUrlParameters:
+      post_id: 9a306bc8-4cf5-4921-b6f8-c3045745f7a0
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PATCH
+    uri: 'api/post/{post_id}/edit'
+    metadata:
+      groupName: Post
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update post'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      post_id:
+        name: post_id
+        description: 'The ID of the post.'
+        required: true
+        example: 9a306bc8-4cf5-4921-b6f8-c3045745f7a0
+        type: string
+        enumValues: []
+        custom: []
+    cleanUrlParameters:
+      post_id: 9a306bc8-4cf5-4921-b6f8-c3045745f7a0
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      category:
+        name: category
+        description: 'Category of blog post. Possible to use beauty, food, life, sport.'
+        required: false
+        example: food
+        type: string
+        enumValues:
+          - beauty
+          - sport
+          - food
+          - life
+        custom: []
+      title:
+        name: title
+        description: 'Title of blog post. Must not be greater than 256 characters.'
+        required: false
+        example: 'Eating a lof of sweets are unhealthy'
+        type: string
+        enumValues: []
+        custom: []
+      description:
+        name: description
+        description: 'Blog post description. Must not be greater than 256 characters.'
+        required: false
+        example: 'In 1999 Michael J wrote that eating a lot of sweets involved on our health'
+        type: string
+        enumValues: []
+        custom: []
+    cleanBodyParameters:
+      category: food
+      title: 'Eating a lof of sweets are unhealthy'
+      description: 'In 1999 Michael J wrote that eating a lot of sweets involved on our health'
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PATCH
+    uri: 'api/post/{post_id}/delete'
+    metadata:
+      groupName: Post
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Delete post'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      post_id:
+        name: post_id
+        description: 'The ID of the post.'
+        required: true
+        example: 9a306bc8-4cf5-4921-b6f8-c3045745f7a0
+        type: string
+        enumValues: []
+        custom: []
+    cleanUrlParameters:
+      post_id: 9a306bc8-4cf5-4921-b6f8-c3045745f7a0
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/post
+    metadata:
+      groupName: Post
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'List user posts'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

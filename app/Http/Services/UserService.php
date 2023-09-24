@@ -27,9 +27,13 @@ class UserService
     public function login(User $user, array $credentials): JsonResponse
     {
         if (Auth::attempt($credentials)) {
-            $user->createToken('api token')->plainTextToken;
+            $token = $user->createToken('api token')->plainTextToken;
 
-            return new JsonResponse(['message' => 'Log in successfully'], 200);
+            return new JsonResponse([
+                'message' => 'Log in successfully',
+                'user'    => $user,
+                'token'   => $token,
+            ], 200);
         }
 
         return new JsonResponse(['message' => 'Credentials are wrong'], 401);

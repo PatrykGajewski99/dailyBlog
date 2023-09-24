@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Customer;
+use App\Http\Controllers\Posts;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,3 +19,14 @@ Route::prefix('/user')->group(function () {
     Route::post('/login', Customer\LoginController::class);
 });
 
+Route::middleware('auth:sanctum')->group(function () {
+    Route::prefix('/post')->group(function () {
+        Route::post('/add', Posts\CreatePostController::class);
+        Route::prefix('/{post}')->group(function () {
+            Route::get('/', Posts\GetPostController::class);
+            Route::patch('/edit', Posts\UpdatePostController::class);
+            Route::delete('/delete', Posts\DeletePostController::class);
+        });
+        Route::get('/', Posts\ListUserPostsController::class);
+    });
+});
