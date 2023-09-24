@@ -81,6 +81,71 @@ paths:
         required: true
         schema:
           type: string
+  '/api/post/{post_id}/edit':
+    patch:
+      summary: 'Update post'
+      operationId: updatePost
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Post
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                category:
+                  type: string
+                  description: 'Category of blog post. Possible to use beauty, food, life, sport.'
+                  example: food
+                  enum:
+                    - beauty
+                    - sport
+                    - food
+                    - life
+                title:
+                  type: string
+                  description: 'Title of blog post. Must not be greater than 256 characters.'
+                  example: 'Eating a lof of sweets are unhealthy'
+                description:
+                  type: string
+                  description: 'Blog post description. Must not be greater than 256 characters.'
+                  example: 'In 1999 Michael J wrote that eating a lot of sweets involved on our health'
+      security: []
+    parameters:
+      -
+        in: path
+        name: post_id
+        description: 'The ID of the post.'
+        example: 9a306bc8-4cf5-4921-b6f8-c3045745f7a0
+        required: true
+        schema:
+          type: string
+  /api/post:
+    get:
+      summary: 'List user posts'
+      operationId: listUserPosts
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Post
+      security: []
   /api/user/register:
     post:
       summary: 'Register User'
@@ -165,32 +230,10 @@ paths:
                 password:
                   type: string
                   description: ''
-                  example: '''hJy{G{ye8,u%3K9\cN'
+                  example: 'x+{DH\'
               required:
                 - email
                 - password
-      security: []
-  /api/post:
-    get:
-      summary: 'List user posts'
-      operationId: listUserPosts
-      description: ''
-      parameters: []
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: Unauthenticated.
-                properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
-      tags:
-        - User
       security: []
 tags:
   -

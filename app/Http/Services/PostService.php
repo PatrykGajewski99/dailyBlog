@@ -12,4 +12,13 @@ class PostService
     {
         return Post::query()->create($attributes);
     }
+
+    public function update(Post $post, array $attributes): Post
+    {
+        $post->update($attributes);
+
+        $post->save();
+
+        return $post;
+    }
 }
