@@ -191,6 +191,45 @@ endpoints:
     custom: []
   -
     httpMethods:
+      - PATCH
+    uri: 'api/post/{post_id}/delete'
+    metadata:
+      groupName: Post
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Delete post'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      post_id:
+        name: post_id
+        description: 'The ID of the post.'
+        required: true
+        example: 9a306bc8-4cf5-4921-b6f8-c3045745f7a0
+        type: string
+        enumValues: []
+        custom: []
+    cleanUrlParameters:
+      post_id: 9a306bc8-4cf5-4921-b6f8-c3045745f7a0
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
       - GET
     uri: api/post
     metadata:

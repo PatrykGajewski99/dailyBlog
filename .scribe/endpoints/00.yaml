@@ -140,13 +140,13 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: 'x+{DH\'
+        example: '`Bwn<CVP3VM3EAN3X1`B'
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
       email: example@gmail.com
-      password: 'x+{DH\'
+      password: '`Bwn<CVP3VM3EAN3X1`B'
     fileParameters: []
     responses: []
     responseFields: []

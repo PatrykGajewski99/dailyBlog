@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "DailyBlog",
-        "_postman_id": "fe3c3b20-4833-474e-b460-b6f60c901d1f",
+        "_postman_id": "38cc8f6d-8a36-44fc-9c38-232a73ba2cd1",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -146,6 +146,42 @@
                     "response": []
                 },
                 {
+                    "name": "Delete post",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/post\/:post_id\/delete",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/post\/:post_id\/delete",
+                            "variable": [
+                                {
+                                    "id": "post_id",
+                                    "key": "post_id",
+                                    "value": "9a306bc8-4cf5-4921-b6f8-c3045745f7a0",
+                                    "description": "The ID of the post."
+                                }
+                            ]
+                        },
+                        "method": "PATCH",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
                     "name": "List user posts",
                     "request": {
                         "url": {
@@ -252,7 +288,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"example@gmail.com\",\"password\":\"x+{DH\\\\\"}"
+                            "raw": "{\"email\":\"example@gmail.com\",\"password\":\"`Bwn<CVP3VM3EAN3X1`B\"}"
                         },
                         "description": "",
                         "auth": {

@@ -19,13 +19,14 @@ Route::prefix('/user')->group(function () {
     Route::post('/login', Customer\LoginController::class);
 });
 
-Route::middleware('auth:sanctum')->group( function () {
+Route::middleware('auth:sanctum')->group(function () {
     Route::prefix('/post')->group(function () {
-       Route::post('/add', Posts\CreatePostController::class);
-       Route::prefix('/{post}')->group(function () {
-          Route::get('/', Posts\GetPostController::class);
-          Route::patch('/edit', Posts\UpdatePostController::class);
-       });
-       Route::get('/', Posts\ListUserPostsController::class);
+        Route::post('/add', Posts\CreatePostController::class);
+        Route::prefix('/{post}')->group(function () {
+            Route::get('/', Posts\GetPostController::class);
+            Route::patch('/edit', Posts\UpdatePostController::class);
+            Route::delete('/delete', Posts\DeletePostController::class);
+        });
+        Route::get('/', Posts\ListUserPostsController::class);
     });
 });

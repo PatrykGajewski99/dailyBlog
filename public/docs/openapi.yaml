@@ -124,6 +124,25 @@ paths:
         required: true
         schema:
           type: string
+  '/api/post/{post_id}/delete':
+    patch:
+      summary: 'Delete post'
+      operationId: deletePost
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Post
+      security: []
+    parameters:
+      -
+        in: path
+        name: post_id
+        description: 'The ID of the post.'
+        example: 9a306bc8-4cf5-4921-b6f8-c3045745f7a0
+        required: true
+        schema:
+          type: string
   /api/post:
     get:
       summary: 'List user posts'
@@ -230,7 +249,7 @@ paths:
                 password:
                   type: string
                   description: ''
-                  example: 'x+{DH\'
+                  example: '`Bwn<CVP3VM3EAN3X1`B'
               required:
                 - email
                 - password
