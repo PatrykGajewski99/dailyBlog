@@ -17,4 +17,15 @@ class ApiTest extends TestCase
 
         return $response;
    }
+
+   public function deld(?User $user = null, string $uri, array $data = [], int $expectedStatus = 204): TestResponse
+   {
+       $response = $user ? $this->actingAs($user)->delete($uri, $data) : $this->delete($uri, $data);
+
+       $expectedStatus !== $response->getStatusCode()
+           ? $response->json()
+           : $response->assertStatus($expectedStatus);
+
+       return $response;
+   }
 }
