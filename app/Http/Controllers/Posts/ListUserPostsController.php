@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Posts;
 
 use App\Http\Repositories\PostRepository;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class ListUserPostsController
@@ -17,9 +18,12 @@ class ListUserPostsController
      *
      * @group Post
      *
+     * @param Request $request
      * @return JsonResponse
+     *
+     * @responseFile resources/list_user_posts.json
      */
-    public function __invoke(): JsonResponse
+    public function __invoke(Request $request): JsonResponse
     {
         return new JsonResponse($this->postRepository->getUserPosts(Auth::user()->getAuthIdentifier()));
     }

@@ -17,6 +17,8 @@ class GetPostController
      * @param GetPostRequest $request
      * @param Post $post
      * @return JsonResponse
+     *
+     * @responseFile resources/blog_post.json
      */
     public function __invoke(GetPostRequest $request, Post $post): JsonResponse
     {

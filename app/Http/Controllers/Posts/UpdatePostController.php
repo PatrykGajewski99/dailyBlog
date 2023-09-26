@@ -21,6 +21,8 @@ class UpdatePostController
      * @param UpdatePostRequest $request
      * @param Post $post
      * @return JsonResponse
+     *
+     * @responseFile resources/blog_post.json
      */
     public function __invoke(UpdatePostRequest $request, Post $post): JsonResponse
     {
