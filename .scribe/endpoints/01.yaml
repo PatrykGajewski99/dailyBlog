@@ -92,12 +92,12 @@ endpoints:
         name: post_id
         description: 'The ID of the post.'
         required: true
-        example: 9a306bc8-4cf5-4921-b6f8-c3045745f7a0
+        example: quisquam
         type: string
         enumValues: []
         custom: []
     cleanUrlParameters:
-      post_id: 9a306bc8-4cf5-4921-b6f8-c3045745f7a0
+      post_id: quisquam
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -140,12 +140,12 @@ endpoints:
         name: post_id
         description: 'The ID of the post.'
         required: true
-        example: 9a306bc8-4cf5-4921-b6f8-c3045745f7a0
+        example: itaque
         type: string
         enumValues: []
         custom: []
     cleanUrlParameters:
-      post_id: 9a306bc8-4cf5-4921-b6f8-c3045745f7a0
+      post_id: itaque
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -210,12 +210,12 @@ endpoints:
         name: post_id
         description: 'The ID of the post.'
         required: true
-        example: 9a306bc8-4cf5-4921-b6f8-c3045745f7a0
+        example: harum
         type: string
         enumValues: []
         custom: []
     cleanUrlParameters:
-      post_id: 9a306bc8-4cf5-4921-b6f8-c3045745f7a0
+      post_id: harum
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

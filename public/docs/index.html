@@ -113,7 +113,7 @@
     </ul>
 
     <ul class="toc-footer" id="last-updated">
-        <li>Last updated: September 24, 2023</li>
+        <li>Last updated: September 26, 2023</li>
     </ul>
 </div>
 
@@ -318,14 +318,14 @@ Must be one of:
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/post/9a306bc8-4cf5-4921-b6f8-c3045745f7a0" \
+    --get "http://localhost/api/post/quisquam" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/post/9a306bc8-4cf5-4921-b6f8-c3045745f7a0"
+    "http://localhost/api/post/quisquam"
 );
 
 const headers = {
@@ -434,10 +434,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="post_id"                data-endpoint="GETapi-post--post_id-"
-               value="9a306bc8-4cf5-4921-b6f8-c3045745f7a0"
+               value="quisquam"
                data-component="url">
     <br>
-<p>The ID of the post. Example: <code>9a306bc8-4cf5-4921-b6f8-c3045745f7a0</code></p>
+<p>The ID of the post. Example: <code>quisquam</code></p>
             </div>
                     </form>
 
@@ -454,7 +454,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PATCH \
-    "http://localhost/api/post/9a306bc8-4cf5-4921-b6f8-c3045745f7a0/edit" \
+    "http://localhost/api/post/itaque/edit" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -467,7 +467,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/post/9a306bc8-4cf5-4921-b6f8-c3045745f7a0/edit"
+    "http://localhost/api/post/itaque/edit"
 );
 
 const headers = {
@@ -567,10 +567,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="post_id"                data-endpoint="PATCHapi-post--post_id--edit"
-               value="9a306bc8-4cf5-4921-b6f8-c3045745f7a0"
+               value="itaque"
                data-component="url">
     <br>
-<p>The ID of the post. Example: <code>9a306bc8-4cf5-4921-b6f8-c3045745f7a0</code></p>
+<p>The ID of the post. Example: <code>itaque</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -623,14 +623,14 @@ Must be one of:
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/post/9a306bc8-4cf5-4921-b6f8-c3045745f7a0/delete" \
+    "http://localhost/api/post/harum/delete" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/post/9a306bc8-4cf5-4921-b6f8-c3045745f7a0/delete"
+    "http://localhost/api/post/harum/delete"
 );
 
 const headers = {
@@ -723,10 +723,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="post_id"                data-endpoint="DELETEapi-post--post_id--delete"
-               value="9a306bc8-4cf5-4921-b6f8-c3045745f7a0"
+               value="harum"
                data-component="url">
     <br>
-<p>The ID of the post. Example: <code>9a306bc8-4cf5-4921-b6f8-c3045745f7a0</code></p>
+<p>The ID of the post. Example: <code>harum</code></p>
             </div>
                     </form>
 
@@ -917,7 +917,24 @@ fetch(url, {
 </span>
 
 <span id="example-responses-POSTapi-user-register">
-</span>
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;first_name&quot;: &quot;Patryk&quot;,
+    &quot;last_name&quot;: &quot;Gajewski&quot;,
+    &quot;phone_number&quot;: &quot;777878727&quot;,
+    &quot;email&quot;: &quot;example22@gmail.com&quot;,
+    &quot;country&quot;: &quot;poland&quot;,
+    &quot;town&quot;: &quot;Warsaw&quot;,
+    &quot;id&quot;: &quot;9a3a1869-1239-4e03-adf1-051d9a02d580&quot;,
+    &quot;updated_at&quot;: &quot;2023-09-26T15:44:43.000000Z&quot;,
+    &quot;created_at&quot;: &quot;2023-09-26T15:44:43.000000Z&quot;
+}</code>
+ </pre>
+    </span>
 <span id="execution-results-POSTapi-user-register" hidden>
     <blockquote>Received response<span
                 id="execution-response-status-POSTapi-user-register"></span>:
@@ -1098,7 +1115,7 @@ Must be one of:
     --header "Accept: application/json" \
     --data "{
     \"email\": \"example@gmail.com\",
-    \"password\": \",&amp;DL*:)z|\\\\\"
+    \"password\": \"ldaR8i#L+Ez?:FF4}\"
 }"
 </code></pre></div>
 
@@ -1115,7 +1132,7 @@ const headers = {
 
 let body = {
     "email": "example@gmail.com",
-    "password": ",&amp;DL*:)z|\\"
+    "password": "ldaR8i#L+Ez?:FF4}"
 };
 
 fetch(url, {
@@ -1215,10 +1232,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTapi-user-login"
-               value=",&DL*:)z|\"
+               value="ldaR8i#L+Ez?:FF4}"
                data-component="body">
     <br>
-<p>Example: <code>,&amp;DL*:)z|\</code></p>
+<p>Example: <code>ldaR8i#L+Ez?:FF4}</code></p>
         </div>
         </form>
 
@@ -1235,14 +1252,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/user/9a2e1b3e-8d29-41bc-b341-bf8804a5ce62/delete" \
+    "http://localhost/api/user/9a3655dc-ae0d-48e3-95c4-fc3eab2e619e/delete" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/user/9a2e1b3e-8d29-41bc-b341-bf8804a5ce62/delete"
+    "http://localhost/api/user/9a3655dc-ae0d-48e3-95c4-fc3eab2e619e/delete"
 );
 
 const headers = {
@@ -1335,10 +1352,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="user_id"                data-endpoint="DELETEapi-user--user_id--delete"
-               value="9a2e1b3e-8d29-41bc-b341-bf8804a5ce62"
+               value="9a3655dc-ae0d-48e3-95c4-fc3eab2e619e"
                data-component="url">
     <br>
-<p>The ID of the user. Example: <code>9a2e1b3e-8d29-41bc-b341-bf8804a5ce62</code></p>
+<p>The ID of the user. Example: <code>9a3655dc-ae0d-48e3-95c4-fc3eab2e619e</code></p>
             </div>
                     </form>
 

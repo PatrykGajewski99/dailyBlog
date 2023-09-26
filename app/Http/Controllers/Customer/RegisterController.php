@@ -20,6 +20,8 @@ class RegisterController extends Controller
      *
      * @param RegisterRequest $request
      * @return JsonResponse
+     *
+     * @responseFile resources/user_registration.json
      */
     public function __invoke(RegisterRequest $request): JsonResponse
     {

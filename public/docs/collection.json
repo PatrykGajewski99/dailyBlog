@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "DailyBlog",
-        "_postman_id": "f0096953-0f30-468b-b552-0ebc4853e36b",
+        "_postman_id": "0993f0ac-9fe0-44da-9346-9c64d43a81f2",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -62,7 +62,7 @@
                                 {
                                     "id": "post_id",
                                     "key": "post_id",
-                                    "value": "9a306bc8-4cf5-4921-b6f8-c3045745f7a0",
+                                    "value": "quisquam",
                                     "description": "The ID of the post."
                                 }
                             ]
@@ -118,7 +118,7 @@
                                 {
                                     "id": "post_id",
                                     "key": "post_id",
-                                    "value": "9a306bc8-4cf5-4921-b6f8-c3045745f7a0",
+                                    "value": "itaque",
                                     "description": "The ID of the post."
                                 }
                             ]
@@ -157,7 +157,7 @@
                                 {
                                     "id": "post_id",
                                     "key": "post_id",
-                                    "value": "9a306bc8-4cf5-4921-b6f8-c3045745f7a0",
+                                    "value": "harum",
                                     "description": "The ID of the post."
                                 }
                             ]
@@ -264,7 +264,14 @@
                             "type": "noauth"
                         }
                     },
-                    "response": []
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n    \"first_name\": \"Patryk\",\n    \"last_name\": \"Gajewski\",\n    \"phone_number\": \"777878727\",\n    \"email\": \"example22@gmail.com\",\n    \"country\": \"poland\",\n    \"town\": \"Warsaw\",\n    \"id\": \"9a3a1869-1239-4e03-adf1-051d9a02d580\",\n    \"updated_at\": \"2023-09-26T15:44:43.000000Z\",\n    \"created_at\": \"2023-09-26T15:44:43.000000Z\"\n}\n",
+                            "name": ""
+                        }
+                    ]
                 },
                 {
                     "name": "Login User",
@@ -288,7 +295,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"example@gmail.com\",\"password\":\",&DL*:)z|\\\\\"}"
+                            "raw": "{\"email\":\"example@gmail.com\",\"password\":\"ldaR8i#L+Ez?:FF4}\"}"
                         },
                         "description": "",
                         "auth": {
@@ -309,7 +316,7 @@
                                 {
                                     "id": "user_id",
                                     "key": "user_id",
-                                    "value": "9a2e1b3e-8d29-41bc-b341-bf8804a5ce62",
+                                    "value": "9a3655dc-ae0d-48e3-95c4-fc3eab2e619e",
                                     "description": "The ID of the user."
                                 }
                             ]

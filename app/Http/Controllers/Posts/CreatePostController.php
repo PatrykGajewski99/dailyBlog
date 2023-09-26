@@ -15,12 +15,14 @@ class CreatePostController
     }
 
     /**
-     * Add blog post
+     * Create blog post
      *
      * @group Post
      *
      * @param CreatePostRequest $request
      * @return JsonResponse
+     *
+     * @responseFile resources/blog_post.json
      */
     public function __invoke(CreatePostRequest $request): JsonResponse
     {
