@@ -23,6 +23,6 @@ class RegisterController extends Controller
      */
     public function __invoke(RegisterRequest $request): JsonResponse
     {
-       return new JsonResponse($this->userService->add($request->validated()));
+       return new JsonResponse($this->userService->add($request->validated()), 201);
     }
 }

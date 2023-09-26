@@ -191,7 +191,7 @@ endpoints:
     custom: []
   -
     httpMethods:
-      - PATCH
+      - DELETE
     uri: 'api/post/{post_id}/delete'
     metadata:
       groupName: Post

@@ -80,8 +80,8 @@
                                                                                 <li class="tocify-item level-2" data-unique="post-PATCHapi-post--post_id--edit">
                                 <a href="#post-PATCHapi-post--post_id--edit">Update post</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="post-PATCHapi-post--post_id--delete">
-                                <a href="#post-PATCHapi-post--post_id--delete">Delete post</a>
+                                                                                <li class="tocify-item level-2" data-unique="post-DELETEapi-post--post_id--delete">
+                                <a href="#post-DELETEapi-post--post_id--delete">Delete post</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="post-GETapi-post">
                                 <a href="#post-GETapi-post">List user posts</a>
@@ -98,6 +98,9 @@
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="user-POSTapi-user-login">
                                 <a href="#user-POSTapi-user-login">Login User</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="user-DELETEapi-user--user_id--delete">
+                                <a href="#user-DELETEapi-user--user_id--delete">Delete account</a>
                             </li>
                                                                         </ul>
                             </ul>
@@ -607,19 +610,19 @@ Must be one of:
         </div>
         </form>
 
-                    <h2 id="post-PATCHapi-post--post_id--delete">Delete post</h2>
+                    <h2 id="post-DELETEapi-post--post_id--delete">Delete post</h2>
 
 <p>
 </p>
 
 
 
-<span id="example-requests-PATCHapi-post--post_id--delete">
+<span id="example-requests-DELETEapi-post--post_id--delete">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
-    <pre><code class="language-bash">curl --request PATCH \
+    <pre><code class="language-bash">curl --request DELETE \
     "http://localhost/api/post/9a306bc8-4cf5-4921-b6f8-c3045745f7a0/delete" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -636,58 +639,58 @@ const headers = {
 };
 
 fetch(url, {
-    method: "PATCH",
+    method: "DELETE",
     headers,
 }).then(response =&gt; response.json());</code></pre></div>
 
 </span>
 
-<span id="example-responses-PATCHapi-post--post_id--delete">
+<span id="example-responses-DELETEapi-post--post_id--delete">
 </span>
-<span id="execution-results-PATCHapi-post--post_id--delete" hidden>
+<span id="execution-results-DELETEapi-post--post_id--delete" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-PATCHapi-post--post_id--delete"></span>:
+                id="execution-response-status-DELETEapi-post--post_id--delete"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-PATCHapi-post--post_id--delete"
+    <pre class="json"><code id="execution-response-content-DELETEapi-post--post_id--delete"
       data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
 </span>
-<span id="execution-error-PATCHapi-post--post_id--delete" hidden>
+<span id="execution-error-DELETEapi-post--post_id--delete" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-PATCHapi-post--post_id--delete">
+    <pre><code id="execution-error-message-DELETEapi-post--post_id--delete">
 
 Tip: Check that you&#039;re properly connected to the network.
 If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
 You can check the Dev Tools console for debugging information.</code></pre>
 </span>
-<form id="form-PATCHapi-post--post_id--delete" data-method="PATCH"
+<form id="form-DELETEapi-post--post_id--delete" data-method="DELETE"
       data-path="api/post/{post_id}/delete"
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('PATCHapi-post--post_id--delete', this);">
+      onsubmit="event.preventDefault(); executeTryOut('DELETEapi-post--post_id--delete', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-PATCHapi-post--post_id--delete"
-                    onclick="tryItOut('PATCHapi-post--post_id--delete');">Try it out ⚡
+                    id="btn-tryout-DELETEapi-post--post_id--delete"
+                    onclick="tryItOut('DELETEapi-post--post_id--delete');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-PATCHapi-post--post_id--delete"
-                    onclick="cancelTryOut('PATCHapi-post--post_id--delete');" hidden>Cancel 🛑
+                    id="btn-canceltryout-DELETEapi-post--post_id--delete"
+                    onclick="cancelTryOut('DELETEapi-post--post_id--delete');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-PATCHapi-post--post_id--delete"
+                    id="btn-executetryout-DELETEapi-post--post_id--delete"
                     data-initial-text="Send Request 💥"
                     data-loading-text="⏱ Sending..."
                     hidden>Send Request 💥
             </button>
             </h3>
             <p>
-            <small class="badge badge-purple">PATCH</small>
+            <small class="badge badge-red">DELETE</small>
             <b><code>api/post/{post_id}/delete</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
@@ -696,7 +699,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="PATCHapi-post--post_id--delete"
+                              name="Content-Type"                data-endpoint="DELETEapi-post--post_id--delete"
                value="application/json"
                data-component="header">
     <br>
@@ -707,7 +710,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="PATCHapi-post--post_id--delete"
+                              name="Accept"                data-endpoint="DELETEapi-post--post_id--delete"
                value="application/json"
                data-component="header">
     <br>
@@ -719,7 +722,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="post_id"                data-endpoint="PATCHapi-post--post_id--delete"
+                              name="post_id"                data-endpoint="DELETEapi-post--post_id--delete"
                value="9a306bc8-4cf5-4921-b6f8-c3045745f7a0"
                data-component="url">
     <br>
@@ -1095,7 +1098,7 @@ Must be one of:
     --header "Accept: application/json" \
     --data "{
     \"email\": \"example@gmail.com\",
-    \"password\": \"`Bwn&lt;CVP3VM3EAN3X1`B\"
+    \"password\": \",&amp;DL*:)z|\\\\\"
 }"
 </code></pre></div>
 
@@ -1112,7 +1115,7 @@ const headers = {
 
 let body = {
     "email": "example@gmail.com",
-    "password": "`Bwn&lt;CVP3VM3EAN3X1`B"
+    "password": ",&amp;DL*:)z|\\"
 };
 
 fetch(url, {
@@ -1212,12 +1215,132 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTapi-user-login"
-               value="`Bwn<CVP3VM3EAN3X1`B"
+               value=",&DL*:)z|\"
                data-component="body">
     <br>
-<p>Example: <code>`Bwn&lt;CVP3VM3EAN3X1</code>B`</p>
+<p>Example: <code>,&amp;DL*:)z|\</code></p>
         </div>
         </form>
+
+                    <h2 id="user-DELETEapi-user--user_id--delete">Delete account</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-DELETEapi-user--user_id--delete">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request DELETE \
+    "http://localhost/api/user/9a2e1b3e-8d29-41bc-b341-bf8804a5ce62/delete" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/user/9a2e1b3e-8d29-41bc-b341-bf8804a5ce62/delete"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-DELETEapi-user--user_id--delete">
+</span>
+<span id="execution-results-DELETEapi-user--user_id--delete" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-DELETEapi-user--user_id--delete"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-DELETEapi-user--user_id--delete"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-DELETEapi-user--user_id--delete" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-DELETEapi-user--user_id--delete">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-DELETEapi-user--user_id--delete" data-method="DELETE"
+      data-path="api/user/{user_id}/delete"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('DELETEapi-user--user_id--delete', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-DELETEapi-user--user_id--delete"
+                    onclick="tryItOut('DELETEapi-user--user_id--delete');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-DELETEapi-user--user_id--delete"
+                    onclick="cancelTryOut('DELETEapi-user--user_id--delete');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-DELETEapi-user--user_id--delete"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-red">DELETE</small>
+            <b><code>api/user/{user_id}/delete</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="DELETEapi-user--user_id--delete"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="DELETEapi-user--user_id--delete"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>user_id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="user_id"                data-endpoint="DELETEapi-user--user_id--delete"
+               value="9a2e1b3e-8d29-41bc-b341-bf8804a5ce62"
+               data-component="url">
+    <br>
+<p>The ID of the user. Example: <code>9a2e1b3e-8d29-41bc-b341-bf8804a5ce62</code></p>
+            </div>
+                    </form>
 
             
 

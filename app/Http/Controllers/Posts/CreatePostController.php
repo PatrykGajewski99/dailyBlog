@@ -24,6 +24,6 @@ class CreatePostController
      */
     public function __invoke(CreatePostRequest $request): JsonResponse
     {
-        return new JsonResponse($this->postService->add($request->validated()));
+        return new JsonResponse($this->postService->add($request->validated()), 201);
     }
 }
