@@ -20,6 +20,12 @@ Route::prefix('/user')->group(function () {
 });
 
 Route::middleware('auth:sanctum')->group(function () {
+    Route::prefix('/user')->group(function () {
+        Route::prefix('/{user}')->group(function () {
+            Route::delete('/delete', Customer\DeleteUserController::class);
+        });
+    });
+
     Route::prefix('/post')->group(function () {
         Route::post('/add', Posts\CreatePostController::class);
         Route::prefix('/{post}')->group(function () {

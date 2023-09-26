@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "DailyBlog",
-        "_postman_id": "38cc8f6d-8a36-44fc-9c38-232a73ba2cd1",
+        "_postman_id": "f0096953-0f30-468b-b552-0ebc4853e36b",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -162,7 +162,7 @@
                                 }
                             ]
                         },
-                        "method": "PATCH",
+                        "method": "DELETE",
                         "header": [
                             {
                                 "key": "Content-Type",
@@ -288,8 +288,44 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"example@gmail.com\",\"password\":\"`Bwn<CVP3VM3EAN3X1`B\"}"
+                            "raw": "{\"email\":\"example@gmail.com\",\"password\":\",&DL*:)z|\\\\\"}"
                         },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Delete account",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user\/:user_id\/delete",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/user\/:user_id\/delete",
+                            "variable": [
+                                {
+                                    "id": "user_id",
+                                    "key": "user_id",
+                                    "value": "9a2e1b3e-8d29-41bc-b341-bf8804a5ce62",
+                                    "description": "The ID of the user."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
                         "description": "",
                         "auth": {
                             "type": "noauth"
