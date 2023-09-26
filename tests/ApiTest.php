@@ -28,4 +28,15 @@ class ApiTest extends TestCase
 
        return $response;
    }
+
+    public function getd(?User $user = null, string $uri, array $data = [], int $expectedStatus = 200): TestResponse
+    {
+        $response = $user ? $this->actingAs($user)->get($uri, $data) : $this->get($uri, $data);
+
+        $expectedStatus !== $response->getStatusCode()
+            ? $response->json()
+            : $response->assertStatus($expectedStatus);
+
+        return $response;
+    }
 }
